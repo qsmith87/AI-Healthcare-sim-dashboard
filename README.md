@@ -1,86 +1,59 @@
-# 🩺 AI Healthcare Simulation Dashboard
+# AI Healthcare Simulation Dashboard
 
-AI-powered Streamlit dashboard that analyzes healthcare simulation survey results, performance checklist data, and generates automated reports for instructors and simulation center teams.
+This is a Streamlit-based AI-powered grading tool for clinical simulation post-encounter notes. It uses an LLM via OpenRouter to evaluate learner notes based on a customizable rubric.
 
----
+## Features
 
-## 🚀 Features
+- 📄 Upload learner post-encounter notes
+- 🤖 AI-driven scoring on 7 key clinical dimensions
+- 💡 Real-time feedback with rubric-based evaluation
+- 🔐 Secure API key management via `.env`
 
-- Upload simulation survey CSV data
-- Analyze Likert scale & performance metrics
-- Run sentiment analysis on open-ended comments
-- Generate word clouds for feedback trends
-- Auto-generate summary insights
-- Export PDF-ready report for debriefing
+## Setup Instructions
 
----
+### 1. Clone the repository
 
-## 🧰 Technologies Used
-
-- Python
-- Streamlit
-- Pandas
-- Matplotlib
-- TextBlob (Sentiment Analysis)
-- WordCloud
-- FPDF (PDF Report Generation)
-
----
-
-## 🗂 Folder Structure
-
-```
-ai-healthcare-sim-dashboard/
-│
-├── app.py                 # Main Streamlit App
-├── requirements.txt      # Python dependencies
-├── checklist.csv         # Example expected checklist
-├── sample_survey.csv     # Example user survey data
-├── score.py              # Performance scoring logic
-├── utils.py              # Helper functions
-├── report_template.pdf   # Optional PDF template
-└── README.md             # This file
-```
-
----
-
-## ⚙️ Getting Started
-
-1. Clone the repository:
 ```bash
-git clone https://github.com/qsmith87/ai-healthcare-sim-dashboard.git
-cd ai-healthcare-sim-dashboard
+git clone https://github.com/YOUR_USERNAME/AI-Healthcare-Sim-Dashboard.git
+cd AI-Healthcare-Sim-Dashboard
 ```
 
-2. Install dependencies:
+### 2. Set up your environment
+
+Install required Python packages:
+
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run the app:
+Create a `.env` file with your OpenRouter API key:
+
+```bash
+echo "OPENROUTER_API_KEY=your-api-key-here" > .env
+```
+
+### 3. Run the app
+
 ```bash
 streamlit run app.py
 ```
 
-4. Upload your CSV files and explore the dashboard.
-
 ---
 
-## 📊 Example Dashboard Screenshot
+## File Structure
 
-*Add your Streamlit dashboard screenshot here.*
-
----
-
-## 🛠 Future Improvements
-
-- Add real-time LLEAP / SimCapture API integration
-- Role-based dashboard filters (nurses, med students, residents)
-- Customizable PDF branding
-- Performance scoring AI model
-- Cloud-hosted version
-
----
+```
+app.py                    # Main launcher for Streamlit app
+app/
+  ├── ai_grading.py       # AI grading logic via OpenRouter
+  ├── dashboard.py        # Checklist scoring module (if used)
+  ├── score.py            # Supporting scoring engine
+  └── __init__.py
+data/
+  ├── checklist.csv        # Example rubric checklist
+  └── sample_simulation_data.csv  # Sample student note
+.env                      # API key (excluded from GitHub)
+```
 
 ## 📬 Contact
 
