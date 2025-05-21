@@ -14,7 +14,7 @@ This is a Streamlit-based AI-powered grading tool for clinical simulation post-e
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Healthcare-Sim-Dashboard.git
+git clone https://github.com/qsmith87/AI-Healthcare-Sim-Dashboard.git
 cd AI-Healthcare-Sim-Dashboard
 ```
 
